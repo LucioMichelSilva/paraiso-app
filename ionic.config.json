@@ -1,0 +1,7 @@
+{
+  "name": "paraiso-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

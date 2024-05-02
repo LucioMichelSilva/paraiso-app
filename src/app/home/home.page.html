@@ -1,0 +1,68 @@
+<ion-header class="custom-header">
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+  <ion-icon name="leaf" size="large" color="success"></ion-icon>
+</div>
+    <ion-title class="custom-title">Paraiso Jardinagem</ion-title>
+    <ion-title class="custom-subtitle">Empresa</ion-title>
+</ion-header>
+
+<div  class="formContext">
+  <ion-content >
+
+    <div style="margin-top: 20px;">
+      <label class="custom-titulos">Selecione o Cliente:</label>
+    </div>
+    <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+    <div class="center-content">
+      <ion-item class="custom-client">
+        <ion-label class="custom-labelcor">Cliente</ion-label>
+        <ion-select [(ngModel)]="selectedClienteId">
+          <ion-select-option *ngFor="let cliente of clientes" [value]="cliente.id">
+            {{ cliente.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+   <div>
+    <label class="custom-titulos">Selecione o Serviço:</label>
+   </div>
+   <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+    <div class="center-content">
+      <ion-item class="custom-service">
+        <ion-label class="custom-labelcor">Serviço</ion-label>
+        <ion-select [(ngModel)]="selectedServicoId" class="center-select ">
+          <ion-select-option *ngFor="let servico of servicos" [value]="servico.id">
+            {{ servico.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <div class="imagens-container">
+      <div *ngFor="let url of imageUrls">
+        <img class="imagem" [src]="url" alt="Imagem Selecionada">
+      </div>
+    </div>
+    
+    <ion-text color="danger" *ngIf="errorMM">{{ errorMM }}</ion-text>
+
+    <div class="center-content">
+      <ion-button (click)="tirarEnviarFoto()" class="custom-buttonFT">
+        <ion-icon name="camera" size="large" color="#fff" style="margin-right: 5px;"></ion-icon>
+      </ion-button>
+    </div>
+  
+   
+    <div class="center-content">
+      <ion-button class="custom-buttonEN" (click)=" EnviarGo();" expand="block">
+        <ion-icon name="paper-plane" size="large" color="#fff" style="margin-right: 5px;"></ion-icon>
+        Enviar
+      </ion-button>
+    </div>
+  
+    <div class="center-content">
+      <label class="custom-avs">selecione os serviços desejados</label>
+    </div>
+  </ion-content>
+</div>
