@@ -9,11 +9,11 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getClientes() {
-    return this.http.get<any[]>('http://192.168.15.150:3001/clients');
+    return this.http.get<any[]>('http://localhost:3001/clients');
   }
 
   getServicos() {
-    return this.http.get<any[]>('http://192.168.15.150:3001/services');
+    return this.http.get<any[]>('http://localhost:3001/services');
   }
 
   enviar(clienteId: number, servicoId: number, foto: File) {

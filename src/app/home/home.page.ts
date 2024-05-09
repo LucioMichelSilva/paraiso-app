@@ -55,6 +55,8 @@ export class HomePage implements OnInit {
       await loading.present();
       await new Promise(resolve => setTimeout(resolve, 2000));
       
+   
+   
       this.selectedClienteId = 0;
       this.selectedServicoId = 0;
       this.imageUrls = [];
