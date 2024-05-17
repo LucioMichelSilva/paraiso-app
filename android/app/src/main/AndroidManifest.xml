@@ -35,7 +35,13 @@
         </provider>
     </application>
 
-    <!-- Permissions -->
-
+    <!-- Permissão para acessar a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permissão para acessar o estado da rede -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permissão para acessar o estado do WiFi (opcional) -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
 </manifest>
