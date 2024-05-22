@@ -25,20 +25,20 @@ export class ApiService {
 
   getClientes() {
     return this.http.get<any[]>(this.url +'/clients')
-    .pipe(
+    /*.pipe(
       catchError(error => {
         //this.presentToast("clientes: " + error);
         return this.handleError(error);
       })
-    );
+    );*/
   }
 
   getServicos() {
-    this.presentToast("servicos: " + this.url);
+    
     return this.http.get<any[]>(this.url + '/services')
-    .pipe(
+   /* .pipe(
       catchError(error => this.handleErrorWithToast(error, 'Erro ao buscar serviços'))
-    );
+    );*/
   }
 
   enviar(clienteId: number, servicoId: number, foto: File) {
@@ -48,15 +48,15 @@ export class ApiService {
     formData.append('serviceId', servicoId.toString());
 
     return this.http.post(this.url + '/images', formData)
-    .pipe(
+    /*.pipe(
       catchError(error => {
         //this.presentToast("enviar: " + error);
         return this.handleError(error);
       })
-    );
+    );*/
   }
 
-  private handleErrorWithToast(error: HttpErrorResponse, userMessage: string) {
+  /*private handleErrorWithToast(error: HttpErrorResponse, userMessage: string) {
     let errorMessage = userMessage;
 
     if (error.error instanceof ErrorEvent) {
@@ -77,5 +77,5 @@ export class ApiService {
   private handleError(error: HttpErrorResponse) {
     console.error('API call failed:', error);
     return throwError('Something went wrong; please try again later.');
-  }
+  }*/
 }

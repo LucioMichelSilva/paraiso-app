@@ -99,6 +99,17 @@
         margin-right: 10px; 
         max-width: 100%; 
       }
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
       
+      .logo {
+        width: 55%;
+        height: 140px;
+      }
    
   
