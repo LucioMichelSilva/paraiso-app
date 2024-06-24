@@ -103,7 +103,7 @@ export class HomePage implements OnInit {
 
   async checkPermissions() {
     try {
-      this.presentToast("iniciou validação internet")
+      //this.presentToast("iniciou validação internet")
       const permission = await this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_NETWORK_STATE);
       if (permission.hasPermission) {
         //this.presentToast("tem permissão")
